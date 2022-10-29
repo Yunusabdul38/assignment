@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>zuri grid exercise</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            /* border: 1px solid red; */
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: black;
+        }
+        .container{
+            display: grid;
+            width: 100%;
+            grid-gap: 10px;
+            padding: 10px;
+            max-width: 700px;
+            grid-template-columns: repeat(4, 1fr);
+            height: 400px;
+        }  
+        .bt{
+            width: 100%;
+        }
+        .bt1{
+            grid-row: 1/3;
+            grid-column: 1/4;
+            background-color: red;
+        }
+        .bt2{
+            grid-row: 1/3;
+            background-color: orange;
+        }
+        .bt3{
+            grid-row: 3/5;
+            grid-column: 1/3;
+            background-color: green;
+        }
+        .bt4{
+            grid-column: 3/5;
+            background-color: darkcyan;
+        }
+        .bt5{
+            grid-column: 3/5;
+            background-color: darkcyan;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="bt bt1"></div>
+        <div class="bt bt2"></div>
+        <div class="bt bt3"></div>
+        <div class="bt  bt4"></div>
+        <div class="bt bt5"></div>
+    </div>
+</body>
+</html>
