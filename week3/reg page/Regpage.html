@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;   
+            padding: 0 10px;
+            padding:50px 0;
+            background: linear-gradient(rgba(46,27,29,0.8), rgb(46,27,49,0.8));
+        }
+        .container{
+            width: 100%;
+            max-width: 900px;
+            border-radius: 10px;
+            background: linear-gradient(rgba(35,43,85,0.75), rgb(35,43,85,0.95));
+        }
+        form{
+            width: 100%;
+            display: grid;
+            padding: 1em;
+            grid-gap: .8em;
+        }
+        input::placeholder{
+            color: #1f1f1f;
+            font-size: 18px;
+            font-family: sans-serif;
+        }
+        input, .btn{
+            font-size: 18px;
+            padding: 1em 1.3em;
+            font-family: sans-serif;
+            user-select: none;
+            letter-spacing: 2px;
+            border: none;
+            outline: none;
+            border-radius: 10px;
+            caret-color: skyblue;
+            transition: 300ms linear;
+        }
+        .btn{
+            width: 100%;
+            background-color: skyblue;
+            text-align: center;
+        }
+        .gender select{
+            outline: none;
+            border-radius: 10px;
+            border: none;
+            padding:15px;
+            width: 100%;
+
+            font-size: 18px;
+        }
+        input:focus{
+            transition: 300ms linear;
+            border: 5px solid gray;
+        }
+        label,.checkbox input{
+            font-size: 22px;
+            color: #fff;
+            text-transform: capitalize;
+            margin-left: 15px;
+        }
+        button{
+            background-color: dodgerblue;
+        }
+        button:hover{
+            background-color: rgba(19, 118, 218, 0.575);
+        }
+        .btn a{
+            text-decoration: none;
+            color: #fff;
+            font-size: 20px;
+        }
+        h1{
+            text-align: center;
+            font-family: sans-serif;
+            font-size: 28px;
+            text-align: center;
+            padding: 10px 0;
+            color: #fff;
+            text-transform: capitalize;
+        }
+        input[type='color']{
+            width: 100%;
+            height: 50px;
+            padding: 0;
+        }
+    </style>    
+</head>
+<body>
+    <div class="container">
+        <h1>registration page</h1>
+        <form action="">
+            <label for="name">first name</label>
+            <input type="text"required>
+            <label for="name">last name</label>
+            <input type="text"required>
+            <label for="name">phone number</label>
+            <input type="tel" required>
+            <label for="name">Email</label>
+            <input type="email" required>
+            <div class="gender">
+                <label for="gender">gender</label>
+                <select name="gender">
+                    <option value="gender">Male</option>
+                    <option value="male">Female</option>
+                    <option value="male">Male</option>
+                    <option value="male">Transgender</option>
+                    <option value="male">Non-binary/non-conforming</option>
+                </select>
+            </div>
+            <label for="name">date of birth</label>
+            <input type="date" required>
+            <label for="name">favorite color</label>
+            <input type="color" required>
+            <div class="btn"><a href="./successPage.html">submit</a></div>
+        </form>
+    </div>
+</body>
+</html>
