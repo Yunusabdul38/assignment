@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            padding: 0 10px;
+            background: linear-gradient(rgba(46,27,29,0.8), rgb(46,27,49,0.8));
+        }
+        .container{
+            width: 100%;
+            max-width: 500px;
+            border-radius: 10px;
+            background: linear-gradient(rgba(35,43,85,0.75), rgb(35,43,85,0.95));
+        }
+        form{
+            width: 100%;
+            display: grid;
+            padding: 1em;
+            grid-gap: .8em;
+        }
+        input::placeholder{
+            color: #1f1f1f;
+            font-size: 18px;
+            font-family: sans-serif;
+        }
+        input, button{
+            font-size: 18px;
+            padding: 1em 1.3em;
+            font-family: sans-serif;
+            user-select: none;
+            letter-spacing: 2px;
+            border: none;
+            outline: none;
+            border-radius: 50px;
+            caret-color: skyblue;
+            transition: 300ms linear;
+        }
+        input[type="email"]:invalid{
+            color: rgb(145, 54, 54);
+            outline: none;
+        }
+        input:focus{
+            transition: 300ms linear;
+            transform: scale(105%);
+        }
+        input[type="email"]:valid{
+            color: #1f1f1f;
+            outline:2px solid  green;
+            text-transform: capitalize;
+        }
+        label,.checkbox input{
+            font-size: 22px;
+            color: #fff;
+            text-transform: capitalize;
+            margin-left: 15px;
+        }
+        .checkbox span{
+            color: #fff;
+            font-size: 17px;
+            text-transform: capitalize;
+        }
+        button{
+            background-color: dodgerblue;
+            color: #fff;
+            font-size: 18px;
+        }
+        button:hover{
+            background-color: rgba(19, 118, 218, 0.575);
+        }
+        .links a, button a{
+            color: #fff;
+            text-decoration: none;
+        }
+        .links h4, h1{
+            font-family: sans-serif;
+            padding: 10px 0;
+            text-transform: capitalize;
+            text-align: center;
+            color: #fff;
+        }
+    </style>    
+</head>
+<body>
+    <div class="container">
+        <h1>login page</h1>
+        <form action="">
+            <label for="name">Email</label>
+            <input type="email"id="email" required>
+            <label for="name">password</label>
+            <input type="password" id="password" required>
+            <div class="checkbox">
+                <input type="checkbox" name="" id="checkbox">
+                <span>show password</span>
+            </div>
+            <button><a href="./successPage.html">sign in</a></button>
+        </form>
+        <div class="links">
+            <h4>forget password | <a href="./Regpage.html">register</a></h4>
+        </div>
+    </div>
+</body>
+</html>
